@@ -13,7 +13,7 @@ managed_hosts.each do |ip, host|
   hostsfile_entry ip do
     hostname host
     unique   false
-    notifies :restart, 'service[dnsmasq]', :delayed
+    notifies :restart, 'service[dnsmasq]', :immediately
     action   :create
   end
 end
